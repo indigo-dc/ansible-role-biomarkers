@@ -10,7 +10,7 @@
   - name: Download app with git
     git:
       repo: https://aegis_12@bitbucket.org/aegis_12/pergamo.git
-      dest: "/usr/local/go//src"
+      dest: "/usr/local/go/src/pergamo"
 
   - name: Create GOBIN
     file:
