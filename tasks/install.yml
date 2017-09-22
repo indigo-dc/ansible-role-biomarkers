@@ -19,6 +19,7 @@
 
   - name: Install aplication with GO
     command: go install main.go
+    args:
       creates: "/usr/local/go/bin/main"
       chdir: "/usr/local/go/src/pergamo"
       environment:
