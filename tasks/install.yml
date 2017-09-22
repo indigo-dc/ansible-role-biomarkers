@@ -10,17 +10,17 @@
   - name: Download app with git
     git:
       repo: https://aegis_12@bitbucket.org/aegis_12/pergamo.git
-      dest: "{{ ansible_env.GOPATH }}/src"
+      dest: "/usr/local/go//src"
 
   - name: Create GOBIN
     file:
-      path: "{{ ansible_env.GOPATH }}/bin"
+      path: "/usr/local/go/bin"
       state: directory
 
   - name: Install aplication with GO
     command: go install main.go
-      creates: "{{ ansible_env.GOPATH }}/bin/main"
-      chdir: "{{ ansible_env.GOPATH }}/src/pergamo"
+      creates: "/usr/local/go/bin/main"
+      chdir: "/usr/local/go/src/pergamo"
       environment:
-        GOBIN: "{{ ansible_env.GOPATH }}/bin"
-        PATH: "{{ ansible_env.PATH }}:{{ ansible_env.GOPATH }}/bin"
+        GOBIN: "/usr/local/go/bin"
+        PATH: "{{ ansible_env.PATH }}:/usr/local/go/bin"
