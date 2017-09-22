@@ -1,10 +1,10 @@
 ---
-  - name: Install git with yum
-    yum: name=git
+  - name: Install gcc,git with yum
+    yum: name=git,gcc
     when: ansible_os_family == "RedHat"
 
-  - name: Install git with apt
-    apt: name=git
+  - name: Install gcc,git with apt
+    apt: name=git,gcc
     when: ansible_os_family == "Debian"
 
   - name: Download app with git
