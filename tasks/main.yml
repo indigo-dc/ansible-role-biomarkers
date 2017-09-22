@@ -1,0 +1,10 @@
+---
+# Add a fast check to speed reconfiguration
+- stat: path="{{ ansible_env.GOPATH }}/bin/main"
+  register: app_installed
+
+- include: install.yml
+  when: not app_installed.stat.exists
+
+
+
