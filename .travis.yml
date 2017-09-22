@@ -33,7 +33,6 @@ script:
 
   # install dependencies
   - 'docker exec "$(cat ${container_id})" ansible-galaxy install joshualund.golang indigo-dc.docker'
-  - 'docker exec "$(cat ${container_id})" apt-get update && apt-get install -y apt-transport-https'
 
   # Ansible syntax check.
   - 'docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook /etc/ansible/roles/role_under_test/tests/test.yml --syntax-check'
