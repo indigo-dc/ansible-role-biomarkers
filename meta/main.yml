@@ -13,4 +13,4 @@ galaxy_info:
     - trusty
 dependencies:
   - { role: 'joshualund.golang'}
-  - { role: 'indigo-dc.docker'}
+  - { role: 'grycap.docker'}

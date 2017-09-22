@@ -1,6 +1,6 @@
 ---
 # Add a fast check to speed reconfiguration
-- stat: path="{{ ansible_env.GOPATH }}/bin/main"
+- stat: path="/usr/local/go/bin/main"
   register: app_installed
 
 - include: install.yml
