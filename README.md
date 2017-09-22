@@ -1,5 +1,5 @@
 Installs the INDIGO-DC biomarkers application.
-==============================================
+===============================================
 
 Installs the INDIGO-DC biomarkers application.
 
