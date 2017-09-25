@@ -11,6 +11,7 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - trusty
+    - xenial
 dependencies:
   - { role: 'joshualund.golang'}
   - { role: 'grycap.docker'}
